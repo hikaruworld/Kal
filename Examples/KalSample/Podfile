@@ -1,0 +1,4 @@
+platform :ios, :deployment_target => '5.0'
+
+pod 'Kal',         '0.0.1snapshot'
+
