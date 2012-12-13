@@ -34,10 +34,8 @@
 {
   if ((self = [super init])) {
     monthAndYearFormatter = [[NSDateFormatter alloc] init];
-	NSString *localeString = [[NSLocale preferredLanguages] objectAtIndex:0];
-	NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:localeString];
-	[monthAndYearFormatter setLocale:locale];
-	[locale release];
+    [monthAndYearFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:[NSLocale preferredLanguages][0]]];
+    //TODO: custom format
     [monthAndYearFormatter setDateFormat:@"LLLL yyyy"];
     [self moveToMonthForDate:date];
   }
